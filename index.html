@@ -6,7 +6,60 @@
     <title>Заявление на пособие</title>
   </head>
   <body>
-    <div class="application-form"></div>
+    <div class="application-form">
+      <h1>Заявление на назначение и выплаты единовременного пособия</h1>
+
+      <form action="#">
+          <fieldset>
+              <legend>Сведения о заявителе</legend>
+              <label for="name">Фамилия</label>
+              <input id="name" placeholder="Сидоров" autofocus required>
+              <br>
+              <label for="name">Имя</label>
+              <input id="name" placeholder="Андрей" required>
+              <br>
+              <label for="name">Отчество</label>
+              <input id="name" placeholder="Владимирович">
+              <br>
+              <label for="status">Статус</label>
+              <input id="status" type="text" required>
+              <br>           
+          </fieldset>
+          <fieldset>
+            <legend>Документ, удостоверяющий личность</legend>
+            <label for="passport">Тип документа</label>
+          <input id="passport" list="passport_enumeration"> 
+        </fieldset>
+      <datalist id="passport_enumeration">
+          <option label hidden value="01 паспорт гражданина Российской Федерации"></option>
+          <option label hidden value="02 свидетельство органов ЗАГСа, органа исполнительной власти или органа местного самоуправления о рождении гражданина"></option>
+          <option label hidden value="03 паспорт моряка (удостоверение личности моряка)" value="03 паспорт моряка (удостоверение личности моряка)"></option>
+          <option label hidden value="04 удостоверение личности военнослужащего Российской Федерации" value="militaryman-certificate"></option>
+          <option label hidden value="05 военный билет военнослужащего" value="military-ticket"></option>
+          <option label hidden value="06 временное удостоверение личности гражданина Российской Федерации" value="temporary-certificate"></option>
+          <option label hidden value="07 справка об освобождении из мест лишения свободы" value="release-certificate"></option>
+          <option label hidden value="08 паспорт иностранного гражданина или удостоверение личности лица без гражданства" value="foreign-passport"></option>
+          <option label hidden value="09 вид на жительство Российской Федерации" value="residence-permit"></option>
+          <option label hidden value="10 разрешение на временное проживание" value="temporary-permit"></option>
+          <option label hidden value="11 удостоверение беженца" value="refugee-certificate"></option>
+          <option label hidden value="12 миграционная карта" value="migration-card"></option>
+          <option label hidden value="13 паспорт гражданина СССР образца 1974 г. для некоторых категорий иностранных граждан и лиц без гражданства" value="passport-USSR"></option>  
+      </datalist>
+      <br>
+      <label for="series">Серия</label>
+      <input id="series" type="number">
+      <br>
+      <label for="number">Номер</label>
+      <input id="number" type="number">
+      <br>
+      <label for="date">Дата выдачи</label>
+      <input id="date" type="date">
+      <br>
+      <label for="whose">Кем выдан</label>
+      <textarea id="whose"></textarea>
+    </fieldset>
+
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
