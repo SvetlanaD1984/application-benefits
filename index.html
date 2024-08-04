@@ -1,154 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заявление на пособие</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Заявление на пособие</title>
+</head>
+
+<body>
+  <div class="container">
     <div class="application-form">
-      <h1>Заявление на назначение и выплаты единовременного пособия</h1>
+      <h4>Заявление на назначение и выплаты единовременного пособия</h4>
 
       <form action="#">
-          <fieldset>
-              <legend>Сведения о заявителе</legend>
-              <label for="name">Фамилия <em>*</em></label>
-              <input id="name" placeholder="Сидоров" autofocus required>
-              <br>
-              <label for="name">Имя <em>*</em></label>
-              <input id="name" placeholder="Андрей" required>
-              <br>
-              <label for="name">Отчество</label>
-              <input id="name" placeholder="Владимирович">
-              <br>
-              <label for="status">Статус <em>*</em></label>
-              <input id="status" type="text" required>
-              <p>(не работающий, студент, и т.д.)</p>
-              <br>           
-        
+        <fieldset>
+          <legend>Сведения о заявителе</legend>
+          <div class="application-form_fields">
+            <label for="name">Фамилия <em>*</em></label>
+            <input id="name" required>
+          </div>
+          <div class="application-form_fields"> 
+            <label for="name">Имя <em>*</em></label>
+            <input id="name" required>
+          </div>
+          <div class="application-form_fields"> 
+            <label for="name">Отчество</label>
+            <input id="name">
+          </div>
+          <div class="application-form_fields"> 
+            <label for="status">Статус <em>*</em></label>
+            <input id="status" type="text" required>            
+          </div>
           <fieldset>
             <legend>Документ, удостоверяющий личность</legend>
+            <div class="application-form_fields">
             <label for="passport">Тип документа <em>*</em></label>
-          <input id="passport" list="passport_enumeration"> 
+            <select id="passport_enumeration">
+              <option value="00" selected>(Выберите из списка)</option>
+              <option value="01">01 паспорт гражданина Российской Федерации</option>
+              <option value="02">02 свидетельство органов ЗАГСа, органа исполнительной власти или органа местного
+                самоуправления о рождении гражданина</option>
+              <option value="03">03 паспорт моряка (удостоверение личности моряка)</option>
+              <option value="04">04 удостоверение личности военнослужащего Российской Федерации</option>
+              <option value="05">05 военный билет военнослужащего</option>
+              <option value="06">06 временное удостоверение личности гражданина Российской Федерации</option>
+              <option value="07">07 справка об освобождении из мест лишения свободы</option>
+              <option value="08">08 паспорт иностранного гражданина или удостоверение личности лица без гражданства
+              </option>
+              <option value="09">09 вид на жительство Российской Федерации</option>
+              <option value="10">10 разрешение на временное проживание</option>
+              <option value="11">11 удостоверение беженца</option>
+              <option value="12">12 миграционная карта</option>
+              <option value="13">13 паспорт гражданина СССР образца 1974 г. для некоторых категорий иностранных граждан
+                и лиц без гражданства</option>
+            </select>
+          </div>
+          <div class="application-form_fields">
+            <label for="series">Серия</label>
+            <input id="series" type="number">
+            </div>
+            <div class="application-form_fields">
+            <label for="number">Номер <em>*</em></label>
+            <input id="number" type="number">
+            </div>
+            <div class="application-form_fields">
+            <label for="date">Дата выдачи <em>*</em></label>
+            <input id="date" type="date">
+            </div>
+            <div class="application-form_fields">
+            <label for="whose">Кем выдан <em>*</em></label>
+            <textarea id="whose"></textarea>
+            </div>
+          </fieldset>
+
+          <div class="application-form_fields">
+            <label for="address">Адрес регистрации <em>*</em></label>
+            <textarea id="address" required></textarea>
+          </div>
+          <div class="application-form_buttons">
+            <button class="application-form_btn" type="reset">Очистить</button>
+            <button class="application-form_btn">Выбрать из справочника</button>
+          </div>
+          <div class="application-form_fields">
+          <label for="flat">Квартира</label>
+          <input id="flat" type="number">
+          </div>
+          <div class="application-form_fields">
+          <label for="postal-address">Почтовый адрес <em>*</em></label>
+          <textarea id="postal-address" required></textarea>
+          </div>
+          <div class="application-form_buttons">
+            <button class="application-form_btn"  type="reset">Очистить</button>
+            <button class="application-form_btn" >Выбрать из справочника</button>
+          </div>
+          <div class="application-form_fields">
+          <label for="flat">Квартира</label>
+          <input id="flat" type="number">
+          </div>
+          
+          <input id="postal-address" type="checkbox">Адрес регистрации совпадает с почтовым адресом</label>
+          <br>
+          <div class="application-form_fields">
+          <label for="email">Email</label>
+          <input id="email" placeholder="email@yandex.ru">
+          </div> 
+          <div class="application-form_fields">     
+          <label for="telephone">Телефон</label>
+          <input type="tel" id="telephone" placeholder="+7-000-000-00-00">
+          </div>
+        </fieldset>
+        </fieldset>
+        <fieldset>
+          <legend>Заявление</legend>
+          <p>В соответствии с законом от 19 мая 1995 года № 81-ФЗ "О государственных пособиях гражданам, имеющим детей"
+            прошу назначить мне единовременное пособие при рождении ребенка</p>
+          <fieldset>
+            
+            <legend>Информация о ребенке</legend>
+            
+            <div class="application-form_fields">
+              <label for="name">Фамилия <em>*</em></label>
+            <input id="name" placeholder="Сидоров" autofocus required>
+            </div>
+            
+            <div class="application-form_fields">
+            <label for="name">Имя <em>*</em></label>
+            <input id="name" placeholder="Андрей" required>
+            </div>
+            <div class="application-form_fields">
+            <label for="name">Отчество</label>
+            <input id="name" placeholder="Владимирович">
+            </div>
+            <div class="application-form_fields">
+            <label for="date-birth">Дата рождения <em>*</em></label>
+            <input id="date-birth" type="date">
+            </div>
+          </fieldset>
+          <div>
+            <p>Единовременное пособие при рождении ребенка прошу перечислять через</p>
+            <div>
+              <input type="radio" id="postal" name="postalorg" value="postal" />
+              <label for="postal">организацию федеральной почтовой связи</label>
+            </div>
+            <div>
+              <input type="radio" id="credit" name="creditorg" value="credit" />
+              <label for="credit">кредитную организацию</label>
+            </div>
+          </div>
+          <div class="application-form_fields">
+          <label for="number-organization">Номер организации федеральной почтовой связи <em>*</em></label>
+          <input id="number-organization" type="number">
+          </div>
+          <fieldset>
+            <legend>Реквизиты моего счета</legend>
+            <div class="application-form_fields">
+              <label for="account-number">Номер организации федеральной почтовой связи <em>*</em></label>
+            <input id="account-number">
+            </div>
+            <div class="application-form_fields">
+              <label for="bank">Наименование банковской организации <em>*</em></label>
+            <input id="bank" required>
+            </div>
+            
+            <div class="application-form_fields">
+            <label for="branch-number">№ филиала</label>
+            <input id="branch-number">
+            </div>
+            <div class="application-form_fields">
+            <label for="bik">БИК <em>*</em></label>
+            <input id="bik" type="number">
+            </div>
+            <div class="application-form_fields">
+            <label for="inn">ИНН <em>*</em></label>
+            <input id="inn" type="number">
+            </div>
+            <div class="application-form_fields">
+            <label for="kpp">КПП <em>*</em></label>
+            <input id="kpp" type="number">
+            </div>
+          </fieldset>
+          <div class="application-form_checkboxex">
+          <label for="obligations"><em>*</em>
+            <input id="obligations" type="checkbox">В случае наступления обстоятельств, влекущих прекращение
+            выплаты, обязуюсь сообщить о них в органы социальной защиты в 5 дневный срок </label>
+          </div>
+          <div class="application-form_fields">
+          <label for="absence">
+            <input id="absence" type="checkbox">Отсутствует трудовая книжка</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Прилагаемые документы</legend>
+          <p>Документ, подтверждающий личность</p>
+          <div class="application-form_buttons">
+            <input class="application-form_btn" type="file"><em>*</em>
+          </div>          
+        </fieldset>
+        <div class="application-form_buttons">
+          <button class="application-form_btn" type="submit">Отправить</button>
+        </div>
         
-      <datalist id="passport_enumeration">
-          <option label hidden value="01 паспорт гражданина Российской Федерации"></option>
-          <option label hidden value="02 свидетельство органов ЗАГСа, органа исполнительной власти или органа местного самоуправления о рождении гражданина"></option>
-          <option label hidden value="03 паспорт моряка (удостоверение личности моряка)" value="03 паспорт моряка (удостоверение личности моряка)"></option>
-          <option label hidden value="04 удостоверение личности военнослужащего Российской Федерации" value="militaryman-certificate"></option>
-          <option label hidden value="05 военный билет военнослужащего" value="military-ticket"></option>
-          <option label hidden value="06 временное удостоверение личности гражданина Российской Федерации" value="temporary-certificate"></option>
-          <option label hidden value="07 справка об освобождении из мест лишения свободы" value="release-certificate"></option>
-          <option label hidden value="08 паспорт иностранного гражданина или удостоверение личности лица без гражданства" value="foreign-passport"></option>
-          <option label hidden value="09 вид на жительство Российской Федерации" value="residence-permit"></option>
-          <option label hidden value="10 разрешение на временное проживание" value="temporary-permit"></option>
-          <option label hidden value="11 удостоверение беженца" value="refugee-certificate"></option>
-          <option label hidden value="12 миграционная карта" value="migration-card"></option>
-          <option label hidden value="13 паспорт гражданина СССР образца 1974 г. для некоторых категорий иностранных граждан и лиц без гражданства" value="passport-USSR"></option>  
-      </datalist>
-      <br>
-      <label for="series">Серия</label>
-      <input id="series" type="number">
-      <br>
-      <label for="number">Номер <em>*</em></label>
-      <input id="number" type="number">
-      <br>
-      <label for="date">Дата выдачи <em>*</em></label>
-      <input id="date" type="date">
-      <br>
-      <label for="whose">Кем выдан</label>
-      <textarea id="whose"></textarea>
-    </fieldset> 
-    
-   
-      <label for="address">Адрес регистрации <em>*</em></label>
-      <textarea id="address" required></textarea>   
-      <br>
-      <button>Очистить</button>
-      <button>Выбрать из справочника</button>
-      <br>
-      <label for="flat">Квартира</label>
-      <input id="flat" type="number">
-      <br>
-      <label for="postal-address">
-      <input id="postal-address" type="checkbox">Адрес регистрации совпадает с почтовым адресом</label>
-      <br>
-      <label for="email">Email</label>
-      <input id="email" placeholder="email@yandex.ru">
-      <br>
-      <br>
-      <label for="telephone">Телефон</label>
-      <input id="telephone" placeholder="+7-000-000-00-00">
-      <br>  
-    </fieldset>
-  </fieldset>
-  <fieldset>
-    <legend>Заявление</legend>
-    <p>В соответствии с законом от 19 мая 1995 года № 81-ФЗ "О государственных пособиях гражданам, имеющим детей" прошу назначить мне единовременное пособие при рождении ребенка</p>
-    <fieldset>
-      <legend>Информация о ребенке</legend>
-    <label for="name">Фамилия <em>*</em></label> 
-    <input id="name" placeholder="Сидоров" autofocus required>
-    <br>
-    <label for="name">Имя <em>*</em></label>
-    <input id="name" placeholder="Андрей" required>
-    <br>
-    <label for="name">Отчество</label>
-    <input id="name" placeholder="Владимирович">
-    <br>
-    <label for="date-birth">Дата рождения <em>*</em></label>
-    <input id="date-birth" type="date">
-    <br>
-  </fieldset>
-  <p>Единовременное пособие при рождении ребенка прошу перечислять через</p> 
-    <label for="postal-organization">
-    <input id="postal-organization" type="radio">организацию федеральной почтовой связи</label>
-    <label for="credit-organization">
-      <input id="credit-organization" type="radio">кредитную организацию</label>
-    <br>
-    <label for="number-organization">Номер организации федеральной почтовой связи <em>*</em></label>
-      <input id="number-organization" type="number">
-      <br>
-    <fieldset>
-      <legend>Реквизиты моего счета</legend>
-      <label for="account-number">Номер организации федеральной почтовой связи <em>*</em></label>
-      <input id="account-number" type="number">
-      <br> 
-      <label for="bank">Наименование банковской организации <em>*</em></label>
-      <input id="bank" required>
-      (наименование банковской организации и ее номер)
-      <br> 
-      <label for="branch-number">№ филиала</label>
-      <input id="branch-number">
-      <br>      
-      <label for="bik">БИК <em>*</em></label>
-      <input id="bik" type="number">
-      <br>
-      <label for="inn">ИНН <em>*</em></label>
-      <input id="inn" type="number">
-      <br>
-      <label for="kpp">КПП <em>*</em></label>
-      <input id="kpp" type="number">
-      <br>      
-    </fieldset>
-    <br>
-    <label for="obligations">
-      <em>*</em> <input id="obligations" type="checkbox">В случае наступления обстоятельств, влекущих прекращение выплаты, обязуюсь сообщить о них в органы социальной защиты в 5 дневный срок </label>
-    <br>
-    <label for="absence">
-    <input id="absence" type="checkbox">Отсутствует трудовая книжка</label>
-    <br>
-  </fieldset>
-  <fieldset>
-    <legend>Прилагаемые документы</legend>
-    <p>Документ, подтверждающий личность</p>
-    <button>Прикрепить</button>
-  </fieldset>
-      <p>
-        <input type="submit" value="Отправить">
-    </p>           
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>

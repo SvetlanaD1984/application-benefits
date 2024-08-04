@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: "Gill Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  background-color: #efebde;
+}
+
+.application-form_fields {
+  display: flex;
+  margin-top: 10px;
+}
+
+.application-form_fields .label {
+  flex: 0;
+}
+
+.application-form_fields .input {
+  flex: 1;
+}
+
+.application-form_buttons {
+  display: flex;
+  justify-content: end;
+}
+
+h4 {
+  padding: 30px;
+  text-align: center;
+  color: #364e96;
+}
+
+form {
+  margin: auto;
+  max-width: 800px;
+  padding: 0px 30px;
+}
+
+form p {
+  color: #221c1c;
+}
+
+form legend {
+  padding: 0px 3px;
+  font-weight: bold;
+  color: #364e96;
+}
+
+form label {
+  width: 250px;
+  display: flex;
+  margin: 6px;
+}
+
+form em {
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
+}
+
+form input,
+textarea {
+  width: 249px;
+}
+
+form textarea {
+  height: 100px;
+}
+
+form select {
+  width: 354px;
+}
