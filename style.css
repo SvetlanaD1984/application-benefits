@@ -19,14 +19,8 @@ body {
 .application-form_fields {
   display: flex;
   margin-top: 10px;
-}
-
-.application-form_fields .label {
-  flex: 0;
-}
-
-.application-form_fields .input {
-  flex: 1;
+  justify-content: flex-end;
+  align-items: baseline;
 }
 
 .application-form_buttons {
@@ -34,16 +28,73 @@ body {
   justify-content: end;
 }
 
+.application-form_btn {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 10px;
+  box-shadow: 0px 0px 5px 0px #364e96;
+  padding: 7px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.application-form_note {
+  text-align: center;
+}
+
+.application-form_text {
+  display: flex;
+  justify-content: left;
+}
+
+.application-form_checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.application-form_radiobuttons {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.application-form_payment {
+  display: flex;
+  margin-left: 120px;
+}
+
+.application-form_radiobtn {
+  display: flex;
+}
+
+.custom-file-upload {
+  border: black 1px solid;
+  cursor: pointer;
+  text-align: center;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+  box-shadow: 0px 0px 5px 0px #364e96;
+  padding: 7px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
 h4 {
-  padding: 30px;
+  padding-top: 60px;
+  padding-bottom: 30px;
   text-align: center;
   color: #364e96;
 }
 
 form {
   margin: auto;
-  max-width: 800px;
+  max-width: 1100px;
   padding: 0px 30px;
+  font-weight: bold;
 }
 
 form p {
@@ -52,12 +103,11 @@ form p {
 
 form legend {
   padding: 0px 3px;
-  font-weight: bold;
   color: #364e96;
+  font-style: italic;
 }
 
 form label {
-  width: 250px;
   display: flex;
   margin: 6px;
 }
@@ -70,13 +120,20 @@ form em {
 
 form input,
 textarea {
-  width: 249px;
+  width: 70%;
+  border: 1px solid #364e96;
+  padding: 5px;
 }
 
 form textarea {
-  height: 100px;
+  height: 70%;
 }
 
 form select {
-  width: 354px;
+  width: 70%;
+  padding: 5px;
+}
+
+form fieldset {
+  margin-top: 20px;
 }
